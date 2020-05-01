@@ -52,6 +52,9 @@ docker build -t tutoapi.
 docker run --name tutomysql -d -v /Users/myname/myfappfolder/mysqldata/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root tutobdd 
 docker run --name tutoapi -d -p 3001:3000 --link tutomysql:mysql-container -e MYSQL_HOST=mysql-container -e MYSQL_USER=root -e MYSQL_PASSWORD=root tutoapi
 
+
+# with docker-compose
+docker-compose up -d
 ```
 
 See url http://localhost:3001/users and http://localhost:3001/
